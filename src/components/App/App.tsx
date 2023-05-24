@@ -10,7 +10,7 @@ import Footer from '../Footer/Footer';
 
 
 
-function App() {
+const App: React.FC = () => {
   return (
     <>
       <Header></Header>
