@@ -1,7 +1,9 @@
 import "./Header.scss";
-const Header = () => {
+import React from 'react';
+const Header:React.FC = () => {
     return (
-        <header className="header">
+      <React.Fragment>
+         <header className="header">
             <div className="header__cntr">
                 <div className="header__logo-cntr">
                     <p className="header__logo-name text-mrg">Marina Fominykh</p>
@@ -18,6 +20,8 @@ const Header = () => {
                 </nav>
             </div>
         </header>
+        </React.Fragment>
+       
     )
 }
 
