@@ -7,12 +7,14 @@ import Skills from '../Skills/Skills';
 import Education from '../Education/Education';
 import Contacts from '../Contacts/Contacts';
 import Footer from '../Footer/Footer';
+import Particle from '../Particle/Particle';
 
 
 
 const App: React.FC = () => {
   return (
     <>
+    {/* <Particle /> */}
       <Header></Header>
       <main>
         <Intro />

@@ -42,3 +42,12 @@
     src: url(../vendor/fonts/Inter-Black.woff) format('woff');
     src: url(../vendor/fonts/Inter-Black.woff2) format('woff2');
 }
+
+@font-face {
+    font-family: 'Alfa Slab One';
+    font-style: normal;
+    font-display: wrap;
+    font-weight: 400;
+    src: url(../vendor/fonts/alfaslabone.woff) format('woff');
+    src: url(../vendor/fonts/alfaslabone.woff2) format('woff2');
+}
