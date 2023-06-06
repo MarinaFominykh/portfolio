@@ -1,5 +1,5 @@
-$font-family: 'Inter', Arial, Helvetica, sans-serif;
-$font-color: #118DFF;
+$font-family: "Inter", Arial, Helvetica, sans-serif;
+$font-color: #118dff;
 $blue-color: #3b82f6;
 @mixin regularText {
   font-family: $font-family;
@@ -28,7 +28,7 @@ $blue-color: #3b82f6;
 }
 
 @mixin alfaText {
-  font-family: 'Alfa Slab One', Arial, Helvetica, sans-serif;
+  font-family: "Alfa Slab One", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -38,19 +38,15 @@ $blue-color: #3b82f6;
 
 @mixin maxWidthLarge {
   max-width: 1440px;
-  
 }
 @mixin maxWidthMedium {
   max-width: 1200px;
-  
 }
 @mixin maxWidthSmall {
   max-width: 688px;
-  
 }
 @mixin maxWidthExtraSmall {
   max-width: 280px;
-  
 }
 
 @mixin transparentButton {
@@ -62,10 +58,15 @@ $blue-color: #3b82f6;
   font-family: $font-family;
   font-size: 16px;
   line-height: 24px;
-  color: #3b82f6;
+  color: $blue-color;
   background-color: transparent;
-  border: 2px solid #3b82f6;
+  border: 2px solid $blue-color;
   border-radius: 3px;
+  transition: .5s;
+}
+@mixin transparentButtonHover {
+  color: white;
+  background-color: $blue-color;
 }
 
 @mixin blueButton {
@@ -78,7 +79,14 @@ $blue-color: #3b82f6;
   font-size: 16px;
   line-height: 24px;
   color: #ffffff;
-  background-color:  #3b82f6;;
-  border: 2px solid #3b82f6;
+  background-color: $blue-color;
+  border: 2px solid $blue-color;
   border-radius: 3px;
+  transition: .5s;
+}
+
+@mixin blueButtonHover {
+  transition: all 0.3s ease;
+  background: #0b63f3;
+  border: 2px solid #0b63f3;
 }

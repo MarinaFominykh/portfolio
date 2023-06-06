@@ -39,6 +39,20 @@
   font-size: 16px;
   line-height: 24px;
 }
+.header__nav-item::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 0%;
+  height: 2px;
+  top: 3px;
+  margin: auto;
+  background: #3b82f6;
+  transition: width 0.3s ease;
+}
+.header__nav-item:hover::after {
+  width: 100%;
+}
 .header__link {
   display: flex;
   gap: 8px;
@@ -84,8 +98,15 @@
 .github-btn {
   @include transparentButton;
 }
+.github-btn:hover {
+  @include transparentButtonHover;
+}
+
 .projects-btn {
   @include blueButton;
+}
+.projects-btn:hover {
+  @include blueButtonHover;
 }
 
 .seperator-skew {
