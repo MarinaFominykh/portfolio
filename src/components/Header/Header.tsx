@@ -6,6 +6,7 @@ import { FaTools } from "react-icons/fa";
 import { FaUserGraduate } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 import { FaEnvelope } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
 import Particle from "../Particle/Particle";
 const Header: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ const Header: React.FC = () => {
             <p className="header__logo-prof text-mrg">frontend-developer</p>
           </div>
           <nav className="header__nav">
-            <ul className="header__nav-list">
+            <ul className="header__nav-list list">
               <li className="header__nav-item">
                 <a className="link header__link" href="/">
                   <FaCode size="18px" />
@@ -70,6 +71,28 @@ const Header: React.FC = () => {
         <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
           <polygon className="fill-white" points="2560 0 2560 100 0 100"></polygon>
         </svg>
+      </div>
+      <div className="socials">
+        <ul className="socials__list list">
+        <li className="socials__item socials__blue">
+            <a href="tg://resolve?domain=@FominykhM" target="_blank" className="socials__link link" rel="noreferrer">
+              <span className="socials__text text-mrg">Telegram</span>
+              <FaTelegramPlane size="27px" color="#ffffff"/>
+            </a>
+          </li>
+          <li className="socials__item socials__dark">
+            <a href="/" target="_blank" className="socials__link link">
+              <span className="socials__text text-mrg">GitHub</span>
+              <AiFillGithub size="27px" color="#ffffff"/>
+            </a>
+          </li>
+          <li className="socials__item socials__light">
+            <a href="/" target="_blank"  className="socials__link link">
+              <span className="socials__text text-mrg">E-mail</span>
+              <FaEnvelope size="27px" color="#2e3031;"/>
+            </a>
+          </li>
+        </ul>
       </div>
       </header>
     </React.Fragment>
