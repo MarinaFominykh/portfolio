@@ -1,5 +1,5 @@
 import "./Header.scss";
-import React from "react";
+import React, {useState} from "react";
 import { CgMenu } from "react-icons/cg";
 import { FaCode } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
@@ -8,7 +8,14 @@ import { AiFillGithub } from "react-icons/ai";
 import { FaEnvelope } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import Particle from "../Particle/Particle";
+import Dropdown from "../Dropdown/Dropdown";
 const Header: React.FC = () => {
+  const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
+
+  const handleToggleOpen = () => {
+    setIsOpenMenu(!isOpenMenu);
+    console.log("isOpenMenu", isOpenMenu)
+}
   return (
     <React.Fragment>
       
@@ -47,7 +54,7 @@ const Header: React.FC = () => {
               </li>
             </ul>
           </nav>
-          <CgMenu className="header-burger" size="32px"></CgMenu>
+          <CgMenu onClick={handleToggleOpen} className="header-burger" size="32px"></CgMenu>
         </div>
         <h1 className="header__title text-mrg">
           Hi, I'm&nbsp;
@@ -62,7 +69,7 @@ const Header: React.FC = () => {
             <FaCode size="18px" />
             <p className="header__link-txt text-mrg">Projects</p>
           </a>
-          <a className="button link github-btn" href="/">
+          <a className="button link github-btn" href="https://github.com/MarinaFominykh" target="_blank" rel="noreferrer">
             <AiFillGithub size="20px" />
             <p className="header__link-txt text-mrg">GitHub</p>
           </a>
@@ -81,19 +88,20 @@ const Header: React.FC = () => {
             </a>
           </li>
           <li className="socials__item socials__dark">
-            <a href="/" target="_blank" className="socials__link link">
+            <a href="https://github.com/MarinaFominykh" target="_blank" className="socials__link link" rel="noreferrer">
               <span className="socials__text text-mrg">GitHub</span>
               <AiFillGithub size="27px" color="#ffffff"/>
             </a>
           </li>
           <li className="socials__item socials__light">
-            <a href="/" target="_blank"  className="socials__link link">
+            <a href="mailto:fominykhmm@yandex.ru" target="_blank"  className="socials__link link" rel="noreferrer">
               <span className="socials__text text-mrg">E-mail</span>
-              <FaEnvelope size="27px" color="#2e3031;"/>
+              <FaEnvelope size="27px" color="#2e3031"/>
             </a>
           </li>
         </ul>
       </div>
+      <Dropdown isOpen={isOpenMenu} handleToggleOpen={handleToggleOpen}/>
       </header>
     </React.Fragment>
   );

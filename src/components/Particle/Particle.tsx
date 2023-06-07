@@ -23,6 +23,10 @@ const Particle = () => {
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
+                fullScreen: {
+                    enable: true,
+                    zIndex: 1,
+                },
                 background: {
                     color: {
                         value: "transparent",
@@ -37,30 +41,34 @@ const Particle = () => {
                         },
                         onHover: {
                             enable: true,
-                            mode: "attract",
+                            mode: "grab",
                         },
                         resize: true,
                     },
                     modes: {
                         push: {
-                            quantity: 4,
+                            quantity: 2,
                         },
-                        repulse: {
-                            distance: 200,
-                            duration: 0.4,
+                        grab: {
+                            distance: 100,
+                            links: {
+                                opacity: 0.3,
+                                color: "#ffffff",
+                            },
                         },
                     },
                 },
                 particles: {
                     color: {
                         value: "#ffffff",
+                        
                     },
                     links: {
                         color: "#ffffff",
                         distance: 150,
                         enable: true,
-                        opacity: 0.5,
-                        width: 1,
+                        opacity: 0.3,
+                        width: 0.5,
                     },
                     collisions: {
                         enable: true,
@@ -83,7 +91,7 @@ const Particle = () => {
                         value: 50,
                     },
                     opacity: {
-                        value: { min: 0.1, max: 0.5 },
+                        value: { min: 0.1, max: 0.3 },
                     },
                     shape: {
                         type: "circle",

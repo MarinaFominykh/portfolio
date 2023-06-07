@@ -9,6 +9,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  // overflow: hidden;
+  
 }
 
 .header__cntr {
@@ -64,6 +66,7 @@
 }
 .header-burger {
   display: none;
+  
 }
 .header__title {
   max-width: 640px;
@@ -74,6 +77,8 @@
   white-space: nowrap;
   font-size: clamp(2rem, 5vw, 4rem);
   margin-bottom: 24px;
+  z-index: 1;
+  
 }
 .header__name {
   color: $blue-color;
@@ -87,11 +92,13 @@
   max-width: 640px;
   margin-bottom: 24px;
   padding: 0.5rem;
+  z-index: 1;
 }
 .header__btns {
   display: flex;
   gap: 24px;
   margin-bottom: 150px;
+  z-index: 1;
 }
 .github-btn {
   @include transparentButton;
@@ -115,6 +122,7 @@
   // height: 150px;
   width: 100%;
   overflow: hidden;
+  z-index: 2;
 }
 header .seperator-skew svg .fill-white {
   fill: white;
@@ -123,6 +131,7 @@ header .seperator-skew svg .fill-white {
   position: absolute;
   bottom: 40%;
   left: -125px;
+  z-index: 1;
 }
 .socials__item {
   transition: 0.3s;
