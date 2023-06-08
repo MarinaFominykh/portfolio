@@ -13,11 +13,7 @@ interface DropdownProps {
 }
 
 const Dropdown:React.FC<DropdownProps> = ({isOpen, handleToggleOpen}) => {
-    // const [isOpen, setIsOpen] = useState<boolean>(open);
-    
-    // const handleToggleOpen = () => {
-    //     setIsOpen(!isOpen);
-    // }
+   
     return (
         <aside className={`dropdown ${isOpen && "dropdown_open"} `}>
             <button className="dropdown__close" type="button" onClick={handleToggleOpen}>
@@ -25,25 +21,25 @@ const Dropdown:React.FC<DropdownProps> = ({isOpen, handleToggleOpen}) => {
             </button>
             <nav className="dropdown__nav">
             <ul className="dropdown__nav-list list">
-              <li className="dropdown__nav-item">
+              <li className="dropdown__nav-item" onClick={handleToggleOpen}>
                 <a className="link dropdown__link" href="#">
                   <FaCode size="18px" />
                   <p className="dropdown__link-txt text-mrg">Projects</p>
                 </a>
               </li>
-              <li className="dropdown__nav-item">
+              <li className="dropdown__nav-item" onClick={handleToggleOpen}>
                 <a className="link dropdown__link" href="#">
                   <FaTools size="16px" />
                   <p className="dropdown__link-txt text-mrg">Skills</p>
                 </a>
               </li>
-              <li className="dropdown__nav-item">
+              <li className="dropdown__nav-item" onClick={handleToggleOpen}>
                 <a className="link dropdown__link" href="#">
                   <FaUserGraduate size="16px" />
                   <p className="dropdown__link-txt text-mrg">Education</p>
                 </a>
               </li>
-              <li className="dropdown__nav-item">
+              <li className="dropdown__nav-item" onClick={handleToggleOpen}>
                 <a className="link dropdown__link" href="#">
                   <FaEnvelope size="16px" />
                   <p className="dropdown__link-txt text-mrg">Contact</p>

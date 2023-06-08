@@ -1,5 +1,6 @@
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
+import "./Particles.scss";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 
@@ -19,12 +20,13 @@ const Particle = () => {
 
     return (
         <Particles
-            id="tsparticles"
+        className="particles"
+            id="particles"
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
                 fullScreen: {
-                    enable: true,
+                    enable: false,
                     zIndex: 1,
                 },
                 background: {
