@@ -1,1 +1,89 @@
 @import "../mixin.scss";
+
+.project {
+    display: flex;
+    column-gap: 2rem;
+    margin-bottom: 3rem;
+    
+   
+}
+
+.project__img-wrapper {
+    width: 50%;
+    border: 1px solid lightgray;
+}
+
+.project__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.project__text-clmn {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.project__title {
+    margin-bottom: 1rem;
+    @include semiBoldText;
+    font-size: 1.25rem;
+}
+
+.project__list-span {
+    @include semiBoldText;
+    font-size: 16px;
+    color: grey;
+    margin-right: 1rem;
+}
+
+.project__techs {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    column-gap: 7px;
+    flex-wrap: wrap;
+
+}
+
+.project__description {
+    margin-bottom: 1rem;
+    @include regularText;
+    font-size: 16px;
+}
+
+.project__btn-cntr {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.blue-button {
+    @include blueButton;
+}
+.blue-button:hover {
+    @include blueButtonHover;
+}
+
+.transparent-button {
+    @include transparentButton;
+}
+.transparent-button:hover {
+    @include transparentButtonHover;
+}
+
+@media screen and (max-width: 769px) {
+    .project {
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+
+    .project__img-wrapper {
+        width: 100%;
+    }
+    .project__text-clmn {
+        width: 100%;
+    }
+}

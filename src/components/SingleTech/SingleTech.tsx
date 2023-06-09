@@ -8,7 +8,7 @@ interface SingleTechProps {
 const SingleTech: React.FC<SingleTechProps> = ({tech}) => {
   return (
     <li className="tech">
-      {tech.title}
+      <img className="tech__img" src= {`../../images/icons/${tech.src}`} alt={tech.title} />
     </li>
   );
 };
