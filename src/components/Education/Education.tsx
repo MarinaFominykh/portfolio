@@ -1,6 +1,7 @@
+import "./Education.scss";
 const Education = () => {
     return (
-        <section>Education</section>
+        <section className="education">Education</section>
     )
 }
 

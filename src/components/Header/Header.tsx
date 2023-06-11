@@ -14,13 +14,13 @@ const Header: React.FC = () => {
 
   const handleToggleOpen = () => {
     setIsOpenMenu(!isOpenMenu);
-    console.log("isOpenMenu", isOpenMenu)
+    
 }
   return (
     <React.Fragment>
       
       <header className="header">
-      <Particle />
+      {/* <Particle /> */}
         <div className="header__cntr">
           <div className="header__logo-cntr">
             <p className="header__logo-name text-mrg">Marina&nbsp;Fominykh</p>
