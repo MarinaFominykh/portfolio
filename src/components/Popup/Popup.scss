@@ -1,0 +1,52 @@
+@import "../mixin.scss";
+
+.popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup_opened {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+  z-index: 3;
+}
+.popup__img-wrapper {
+  position: relative;
+}
+.popup__close {
+  border: none;
+  background: transparent;
+  padding: 0;
+  position: absolute;
+  top: -48px;
+  right: -48px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.popup__close:hover {
+  opacity: 0.6;
+}
+
+.popup__img {
+  max-width: 75vw;
+  max-height: 75vh;
+}
+
+@media screen and (max-width: 769px) {
+  .popup__close {
+    top: -32px;
+    right: -32px;
+  }
+}

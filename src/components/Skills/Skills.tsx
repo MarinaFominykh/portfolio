@@ -13,7 +13,7 @@ import { SiExpress } from "react-icons/si";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Skills = () => {
+const Skills:React.FC = () => {
   AOS.init({ duration: 1000 });
   return (
     <section className="skills">
