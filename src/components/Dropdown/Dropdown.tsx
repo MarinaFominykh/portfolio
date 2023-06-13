@@ -22,27 +22,27 @@ const Dropdown:React.FC<DropdownProps> = ({isOpen, handleToggleOpen}) => {
             <nav className="dropdown__nav">
             <ul className="dropdown__nav-list list">
               <li className="dropdown__nav-item" onClick={handleToggleOpen}>
-                <a className="link dropdown__link" href="#">
+                <a className="link dropdown__link" href="#projects">
                   <FaCode size="18px" />
                   <p className="dropdown__link-txt text-mrg">Projects</p>
                 </a>
               </li>
               <li className="dropdown__nav-item" onClick={handleToggleOpen}>
-                <a className="link dropdown__link" href="#">
+                <a className="link dropdown__link" href="#skills">
                   <FaTools size="16px" />
                   <p className="dropdown__link-txt text-mrg">Skills</p>
                 </a>
               </li>
               <li className="dropdown__nav-item" onClick={handleToggleOpen}>
-                <a className="link dropdown__link" href="#">
+                <a className="link dropdown__link" href="#education">
                   <FaUserGraduate size="16px" />
                   <p className="dropdown__link-txt text-mrg">Education</p>
                 </a>
               </li>
               <li className="dropdown__nav-item" onClick={handleToggleOpen}>
-                <a className="link dropdown__link" href="#">
+                <a className="link dropdown__link" href="#contacts">
                   <FaEnvelope size="16px" />
-                  <p className="dropdown__link-txt text-mrg">Contact</p>
+                  <p className="dropdown__link-txt text-mrg">Contacts</p>
                 </a>
               </li>
             </ul>

@@ -1,0 +1,37 @@
+@import "../mixin.scss";
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.form__title {
+  text-align: center;
+  @include alfaText;
+  font-size: 1.5em;
+  color: black;
+  margin-bottom: 48px;
+}
+
+.form__title-span {
+  color: $blue-color;
+}
+.form__input {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #afafaf;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+.form__submit {
+  @include blueButton;
+width: max-content;
+min-width: 100px;
+padding: 8px 0;
+}
+

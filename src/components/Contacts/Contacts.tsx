@@ -1,6 +1,7 @@
 import "./Contacts.scss";
 import { ContactsList } from "../../data/contacts";
 import  ContactCard from "../ContactCard/ContactCard";
+import Form from "../Form/Form";
 import AOS from "aos";
 const Contacts: React.FC = () => {
   AOS.init({duration: 1000});
@@ -18,7 +19,9 @@ const Contacts: React.FC = () => {
             )
           })}
         </ul>
+        <Form />
       </div>
+      
     </section>
   );
 };
