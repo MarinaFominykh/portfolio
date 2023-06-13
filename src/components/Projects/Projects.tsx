@@ -5,7 +5,7 @@ import Project from "../Project/Project";
 
 const Projects: React.FC = () => {
   return (
-    <section className="projects">
+    <section id="projects" className="projects">
       <div className="projects__wrapper">
         <h2 className="projects__title text-mrg">
           My&nbsp;

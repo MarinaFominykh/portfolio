@@ -29,25 +29,25 @@ const Header: React.FC = () => {
           <nav className="header__nav">
             <ul className="header__nav-list list">
               <li className="header__nav-item">
-                <a className="link header__link" href="/">
+                <a className="link header__link" href="#projects">
                   <FaCode size="18px" />
                   <p className="header__link-txt text-mrg">Projects</p>
                 </a>
               </li>
               <li className="header__nav-item">
-                <a className="link header__link" href="/">
+                <a className="link header__link" href="#skills">
                   <FaTools size="16px" />
                   <p className="header__link-txt text-mrg">Skills</p>
                 </a>
               </li>
               <li className="header__nav-item">
-                <a className="link header__link" href="/">
+                <a className="link header__link" href="#education">
                   <FaUserGraduate size="16px" />
                   <p className="header__link-txt text-mrg">Education</p>
                 </a>
               </li>
               <li className="header__nav-item">
-                <a className="link header__link" href="/">
+                <a className="link header__link" href="#contacts">
                   <FaEnvelope size="16px" />
                   <p className="header__link-txt text-mrg">Contact</p>
                 </a>

@@ -13,19 +13,28 @@ import { SiExpress } from "react-icons/si";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Skills:React.FC = () => {
+const Skills: React.FC = () => {
   AOS.init({ duration: 1000 });
   return (
-    <section className="skills">
+    <section id="skills" className="skills">
       <div className="seperator-skew-btm">
-      <div className="seperator-skew-top">
-        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <polygon className="fill-white" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
+        <div className="seperator-skew-top">
+          <svg
+            x="0"
+            y="0"
+            viewBox="0 0 2560 100"
+            preserveAspectRatio="none"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              className="fill-white"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </div>
       </div>
-      </div>
-      <div className="skills__wrapper" data-aos="fade-zoom-in"
-    >
+      <div className="skills__wrapper" data-aos="fade-zoom-in">
         <h2 className="skills__title text-mrg">
           Technical&nbsp;
           <span className="skills__title-span text-mrg">Skills</span>
@@ -104,7 +113,7 @@ const Skills:React.FC = () => {
             <figure className="skills__item">
               <div className="skills__img-wrapper">
                 {/* <img src={express} alt="typescript" className="skills__img" /> */}
-                <SiExpress size="90px" color="#white"/>
+                <SiExpress size="90px" color="#white" />
               </div>
               <figcaption className="skills__description">Express</figcaption>
             </figure>
@@ -120,8 +129,19 @@ const Skills:React.FC = () => {
         </ul>
       </div>
       <div className="seperator-skew">
-        <svg className="seperator-skew__svg" x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <polygon className="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        <svg
+          className="seperator-skew__svg"
+          x="0"
+          y="0"
+          viewBox="0 0 2560 100"
+          preserveAspectRatio="none"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            className="fill-white"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
         </svg>
       </div>
     </section>

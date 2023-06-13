@@ -19,7 +19,7 @@ const App: React.FC = () => {
 
   return (
     <>
-    <Particle/>
+    {/* <Particle/> */}
       <Header></Header>
       <Main handleImageClick={handleImageClick}/>
       <Popup isOpen={isOpen} onClose={closePopup} image={selectedImage} />

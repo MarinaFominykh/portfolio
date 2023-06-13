@@ -1,0 +1,29 @@
+@import "../mixin.scss";
+
+.contacts {
+    background: white;
+    position: relative;
+    z-index: 2;
+}
+.contacts__wrapper {
+    padding: 90px 24px;
+    max-width: $max-width;
+    margin: auto;
+}
+.contacts__title {
+    text-align: center;
+    @include alfaText;
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 48px;
+  }
+  
+  .contacts__title-span {
+    color: $blue-color;
+  }
+
+  .contacts__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }

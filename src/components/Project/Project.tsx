@@ -12,9 +12,11 @@ interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = ({ project }) => {
-  AOS.init({ duration: 1000 });
+  // AOS.init({ duration: 1000 });
   return (
-    <article data-aos="fade-up" className="project">
+    <article 
+    // data-aos="fade-up" 
+    className="project">
       <div className="project__img-wrapper">
         <img
           className="project__img"

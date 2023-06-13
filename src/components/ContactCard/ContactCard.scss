@@ -1,0 +1,36 @@
+@import "../mixin.scss";
+.contact {
+    background: #fff;
+    min-width: 260px;
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
+    border-radius: 3px;
+}
+.contact__icon {
+    margin-bottom: 8px;
+
+}
+.contact__link {
+    transition: 0.3s;
+    
+}
+.contact__link:hover {
+    opacity: 0.6;
+}
+.contact__title {
+    @include semiBoldText;
+    font-size: 18px;
+    margin: 8px;
+}
+
+.contact__link-txt {
+    @include regularText;
+    font-size: 16px;
+    margin: 8px;
+    color: $blue-color;
+}

@@ -5,7 +5,7 @@
     z-index: 2;
 }
 .education__wrapper {
-    padding: 90px 24px;
+    padding: 90px 24px 0 24px;
     max-width: $max-width;
     margin: auto;
 }
@@ -27,7 +27,7 @@
     justify-content: center;
     align-items: center;
     gap: 12px;
-    box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
+    // box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
     padding: 40px;
     border-radius: 3px;
   }

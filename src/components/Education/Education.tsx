@@ -12,8 +12,10 @@ interface EducationProps {
 const Education: React.FC<EducationProps> = ({handleImageClick}) => {
 AOS.init({});
   return (
-    <section className="education">
-      <div className="education__wrapper" data-aos="zoom-in">
+    <section id="education" className="education">
+      <div className="education__wrapper" 
+      data-aos="zoom-in"
+      >
         <h2 className="education__title text-mrg">
           My&nbsp;
           <span className="education__title-span text-mrg">Education</span>
