@@ -1,19 +1,16 @@
 @import "../mixin.scss";
 
 .tech {
-    max-width: 32px;
-       
+  max-width: 32px;
 }
 .tech__img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-   
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 @media screen and (max-width: 540px) {
-    .tech {
-        max-width: 24px;
-               
-    } 
+  .tech {
+    max-width: 24px;
+  }
 }

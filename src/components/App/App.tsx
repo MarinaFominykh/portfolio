@@ -1,27 +1,26 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Particle from "../Particle/Particle";
 import Popup from "../Popup/Popup";
 
-
 const App: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
   const handleImageClick = (image: string) => {
-    setIsOpen(true)
+    setIsOpen(true);
     setSelectedImage(image);
   };
-  const closePopup =() => {
+  const closePopup = () => {
     setIsOpen(false);
-  }
+  };
 
   return (
     <>
-    {/* <Particle/> */}
+      <Particle />
       <Header></Header>
-      <Main handleImageClick={handleImageClick}/>
+      <Main handleImageClick={handleImageClick} />
       <Popup isOpen={isOpen} onClose={closePopup} image={selectedImage} />
     </>
   );

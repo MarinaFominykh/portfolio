@@ -1,52 +1,52 @@
 @import "../mixin.scss";
 .education {
-    background: white;
-    position: relative;
-    z-index: 2;
+  background: white;
+  position: relative;
+  z-index: 2;
 }
 .education__wrapper {
-    padding: 90px 24px 0 24px;
-    max-width: $max-width;
-    margin: auto;
+  padding: 90px 24px 0 24px;
+  max-width: $max-width;
+  margin: auto;
 }
 .education__title {
-    text-align: center;
-    @include alfaText;
-    font-size: 1.5em;
-    color: black;
-    margin-bottom: 48px;
-  }
-  
-  .education__title-span {
-    color: $blue-color;
-  }
+  text-align: center;
+  @include alfaText;
+  font-size: 1.5em;
+  color: black;
+  margin-bottom: 48px;
+}
 
-  .education__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    // box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
-    padding: 40px;
-    border-radius: 3px;
-  }
+.education__title-span {
+  color: $blue-color;
+}
 
-  .education__list-item {
-    max-width: 388px;
-    min-width: 268px;
-    box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
-  }
+.education__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  // box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
+  padding: 40px;
+  border-radius: 3px;
+}
 
-  .education__img {
-    width: 100%;
-  }
+.education__list-item {
+  max-width: 388px;
+  min-width: 268px;
+  box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
+}
 
-  @media screen and (max-width: 769px) {
-    .education__wrapper {
-        padding: 24px 12px;
-      }
-    .education__title {
-        margin-bottom: 32px;
-      }
+.education__img {
+  width: 100%;
+}
+
+@media screen and (max-width: 769px) {
+  .education__wrapper {
+    padding: 24px 12px;
   }
+  .education__title {
+    margin-bottom: 32px;
+  }
+}

@@ -1,6 +1,5 @@
 import React from "react";
 import "./Main.scss";
-// import Intro from "../Intro/Intro";
 import Projects from "../Projects/Projects";
 import Skills from "../Skills/Skills";
 import Education from "../Education/Education";
@@ -10,13 +9,13 @@ import Footer from "../Footer/Footer";
 interface MainProps {
   handleImageClick: (image: string) => void;
 }
-const Main: React.FC<MainProps> = ({handleImageClick}) => {
+const Main: React.FC<MainProps> = ({ handleImageClick }) => {
   return (
     <main>
       {/* <Intro /> */}
       <Projects />
       <Skills />
-      <Education handleImageClick={handleImageClick}/>
+      <Education handleImageClick={handleImageClick} />
       <Contacts />
       <Footer />
     </main>

@@ -7,7 +7,6 @@ import css from "../../images/icons/css.svg";
 import scss from "../../images/icons/sass.svg";
 import node from "../../images/icons/node.svg";
 import mongo from "../../images/icons/mongo_db.svg";
-import express from "../../images/icons/expressjs.svg";
 import git from "../../images/icons/git.svg";
 import { SiExpress } from "react-icons/si";
 import AOS from "aos";

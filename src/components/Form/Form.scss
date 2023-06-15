@@ -21,17 +21,16 @@
   color: $blue-color;
 }
 .form__input {
-    width: 100%;
-    border-radius: 3px;
-    border: 1px solid #afafaf;
-    padding: 0.75rem;
-    font-size: 1rem;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #afafaf;
+  padding: 0.75rem;
+  font-size: 1rem;
 }
 
 .form__submit {
   @include blueButton;
-width: max-content;
-min-width: 100px;
-padding: 8px 0;
+  width: max-content;
+  min-width: 100px;
+  padding: 8px 0;
 }
-

@@ -12,11 +12,9 @@ interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = ({ project }) => {
-  // AOS.init({ duration: 1000 });
+  AOS.init({});
   return (
-    <article 
-    // data-aos="fade-up" 
-    className="project">
+    <article data-aos="fade-up" className="project">
       <div className="project__img-wrapper">
         <img
           className="project__img"
@@ -34,10 +32,12 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
         </ul>
         <p className="project__description text-mrg">{project.description}</p>
         <div className="project__btn-cntr">
-          <a href={project.url} className="project__link blue-button link">
-            <BsBoxArrowUpRight size="20px" />
-            <p className="header__link-txt text-mrg">Live</p>
-          </a>
+          {project.url && (
+            <a href={project.url} className="project__link blue-button link">
+              <BsBoxArrowUpRight size="20px" />
+              <p className="header__link-txt text-mrg">Live</p>
+            </a>
+          )}
           <a
             href={project.githubUrl}
             className="project__link transparent-button link"

@@ -1,13 +1,15 @@
 import "./Form.scss";
 import React, { FC, ChangeEvent, FormEvent, useState } from "react";
+import AOS from "aos";
 
 const Form: React.FC = () => {
+  AOS.init({duration: 1000});
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log(e)
     }
   return (
-    <form className="form" name="form" onSubmit={handleSubmit}>
+    <form data-aos="zoom-in" className="form" name="form" onSubmit={handleSubmit}>
       <h2 className="form__title text-mrg">
         Send&nbsp;
         <span className="form__title-span text-mrg">Email</span>

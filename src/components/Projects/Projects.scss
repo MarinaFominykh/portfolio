@@ -1,29 +1,28 @@
 @import "../mixin.scss";
 
 .projects {
-    background: white;
-    position: relative;
-    z-index: 2;
+  background: white;
+  position: relative;
+  z-index: 2;
 }
 
 .projects__wrapper {
-    max-width: $max-width;
-    padding: 1.5rem 1.5rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    row-gap: 3rem;
+  max-width: $max-width;
+  padding: 1.5rem 1.5rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
 
-    padding: 4.5rem 1.5rem 3rem;
-
+  padding: 4.5rem 1.5rem 3rem;
 }
 
 .projects__title {
-    text-align: center;
-    @include alfaText;
-    font-size: 1.5em;
+  text-align: center;
+  @include alfaText;
+  font-size: 1.5em;
 }
 
 .projects__title-span {
-    color: $blue-color;
+  color: $blue-color;
 }

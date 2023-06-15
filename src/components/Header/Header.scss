@@ -10,8 +10,6 @@
   justify-content: center;
   align-items: center;
   height: auto;
-  // overflow: hidden;
-
 }
 
 .header__cntr {
@@ -28,7 +26,6 @@
 .header__nav-list {
   display: flex;
   gap: 32px;
-
 }
 
 .header__logo-name {
@@ -74,7 +71,6 @@
 
 .header-burger {
   display: none;
-
 }
 
 .header__title {
@@ -87,7 +83,6 @@
   font-size: clamp(2rem, 5vw, 4rem);
   margin-bottom: 24px;
   z-index: 1;
-
 }
 
 .header__name {
@@ -138,7 +133,6 @@
   width: 100%;
   overflow: hidden;
   z-index: 2;
-
 }
 
 .seperator-skew__svg {
@@ -184,7 +178,6 @@
 .socials__light {
   background-color: #ffffff;
   color: #2e3031;
-  ;
 }
 
 .socials__link {
@@ -196,13 +189,11 @@
   height: 100%;
   width: 100%;
   padding: 15px 20px;
-
 }
 
 .socials__text {
   @include regularText;
   font-size: 1.5rem;
-
 }
 
 @media screen and (max-width: 769px) {
