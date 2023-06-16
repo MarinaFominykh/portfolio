@@ -100,7 +100,7 @@ const Header: React.FC = () => {
           <ul className="socials__list list">
             <li className="socials__item socials__blue">
               <a
-                href="tg://resolve?domain=@FominykhM"
+                href="https://telegram.im/@FominykhM"
                 target="_blank"
                 className="socials__link link"
                 rel="noreferrer"

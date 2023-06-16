@@ -22,7 +22,7 @@ export const ContactsList = [
     id: 2,
     title: "Telegram",
     link: "@FominykhM",
-    url: "tg://resolve?domain=@FominykhM",
+    url: "https://telegram.im/@FominykhM",
     svg: {
       stroke: "currentColor",
       fill: "currentColor",

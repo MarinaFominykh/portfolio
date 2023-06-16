@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
           </li>
           <li className="footer__icon">
             <a
-              href="tg://resolve?domain=@FominykhM"
+              href="https://telegram.im/@FominykhM"
               target="_blank"
               rel="noreferrer"
             >
