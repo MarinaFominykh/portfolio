@@ -2,7 +2,7 @@ import React from "react";
 import "./Projects.scss";
 import { initialProjects } from "../../data/projects";
 import Project from "../Project/Project";
-console.log(initialProjects)
+
 const Projects: React.FC = () => {
   return (
     <section id="projects" className="projects">
