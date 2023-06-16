@@ -6,6 +6,7 @@ import diplomaRuP1 from "../../images/diploma_p1.png";
 import diplomaRuP2 from "../../images/diploma_p2.png";
 import AOS from "aos";
 
+
 interface EducationProps {
   handleImageClick: (image: string) => void;
 }

@@ -6,6 +6,8 @@ import { ProjectModel } from "../../models/ProjectModel";
 import SingleTech from "../SingleTech/SingleTech";
 import { AiFillGithub } from "react-icons/ai";
 import { BsBoxArrowUpRight } from "react-icons/bs";
+import diplomaEnP1 from "../../images/rating.png";
+
 
 interface ProjectProps {
   project: ProjectModel;
@@ -18,7 +20,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
       <div className="project__img-wrapper">
         <img
           className="project__img"
-          src={`../../images/${project.src}`}
+          src={`${process.env.PUBLIC_URL}/images/${project.src}`}
           alt={project.title}
         />
       </div>

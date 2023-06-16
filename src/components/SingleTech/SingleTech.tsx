@@ -10,7 +10,7 @@ const SingleTech: React.FC<SingleTechProps> = ({ tech }) => {
     <li className="tech">
       <img
         className="tech__img"
-        src={`../../images/icons/${tech.src}`}
+        src={`${process.env.PUBLIC_URL}/images/icons/${tech.src}`}
         alt={tech.title}
       />
     </li>
