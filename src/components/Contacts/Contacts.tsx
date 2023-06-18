@@ -3,8 +3,12 @@ import { ContactsList } from "../../data/contacts";
 import ContactCard from "../ContactCard/ContactCard";
 import Form from "../Form/Form";
 import AOS from "aos";
+import { InputsValueModel } from "../../models/InputsValueModel";
 const Contacts: React.FC = () => {
   AOS.init({ duration: 1000 });
+  const hadleSubmit =(data: InputsValueModel) => {
+    console.log("formdata=>", data)
+  }
   return (
     <section id="contacts" className="contacts">
       <div className="contacts__wrapper" data-aos="fade-zoom-in">
@@ -17,7 +21,7 @@ const Contacts: React.FC = () => {
             return <ContactCard key={contact.id} contact={contact} />;
           })}
         </ul>
-        {/* <Form /> */}
+        <Form handleSubmit={hadleSubmit} />
       </div>
     </section>
   );
