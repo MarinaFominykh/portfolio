@@ -2,29 +2,33 @@ import "./Form.scss";
 import React, { FC, ChangeEvent, FormEvent, useState } from "react";
 import AOS from "aos";
 import { InputsValueModel } from "../../models/InputsValueModel";
+import SubmitButton from "../SubmitButton/SubmitButton";
 
 interface FormProps {
   handleSubmit: (data: InputsValueModel) => void;
 }
+const initState = {
+  name: "",
+    email: "",
+    message: "",
+};
 const Form: React.FC<FormProps> = ({ handleSubmit }) => {
   AOS.init({ duration: 1000 });
-  const [inputValue, setInputValue] = useState<InputsValueModel>({
-    name: "",
-    email: "",
-    message: "sdfsdfsd",
-  });
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const [inputValue, setInputValue] = useState<InputsValueModel>(initState);
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setInputValue({
       ...inputValue,
       [name]: value,
     });
   };
+
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const { name, email, message } = inputValue;
     if (name && email && message) {
       handleSubmit(inputValue);
+      setInputValue(initState);
     }
   };
   return (
@@ -58,12 +62,13 @@ const Form: React.FC<FormProps> = ({ handleSubmit }) => {
         placeholder="Message"
         rows={7}
         required
-        // onChange={handleChange}
+        onChange={handleChange}
         value={inputValue.message}
       ></textarea>
-      <button className="form__submit" type="submit">
+      {/* <button className="form__submit" type="submit">
         Send
-      </button>
+      </button> */}
+      <SubmitButton isSubmit={true}/>
     </form>
   );
 };
