@@ -4,14 +4,12 @@ import diplomaEnP1 from "../../images/diploma_en_p1.png";
 import diplomaEnP2 from "../../images/diploma_en_p2.png";
 import diplomaRuP1 from "../../images/diploma_p1.png";
 import diplomaRuP2 from "../../images/diploma_p2.png";
-import AOS from "aos";
-
 
 interface EducationProps {
   handleImageClick: (image: string) => void;
 }
 const Education: React.FC<EducationProps> = ({ handleImageClick }) => {
-  AOS.init({});
+ 
   return (
     <section id="education" className="education">
       <div className="education__wrapper" data-aos="zoom-in">

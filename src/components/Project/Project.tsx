@@ -1,6 +1,6 @@
 import React from "react";
 import "./Project.scss";
-import AOS from "aos";
+// import AOS from "aos";
 import "aos/dist/aos.css";
 import { ProjectModel } from "../../models/ProjectModel";
 import SingleTech from "../SingleTech/SingleTech";
@@ -14,7 +14,7 @@ interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = ({ project }) => {
-  AOS.init({});
+  // AOS.init({});
   return (
     <article data-aos="fade-up" className="project">
       <div className="project__img-wrapper">

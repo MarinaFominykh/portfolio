@@ -1,21 +1,34 @@
 import "./Form.scss";
-import React, { FC, ChangeEvent, FormEvent, useState } from "react";
+import React, { FC, ChangeEvent, FormEvent, useState, useRef } from "react";
 import AOS from "aos";
+import { gsap } from "gsap";
 import { InputsValueModel } from "../../models/InputsValueModel";
-import SubmitButton from "../SubmitButton/SubmitButton";
+import { animationSubmit } from "../../utils/functions";
 
 interface FormProps {
   handleSubmit: (data: InputsValueModel) => void;
 }
 const initState = {
   name: "",
-    email: "",
-    message: "",
+  email: "",
+  message: "",
 };
 const Form: React.FC<FormProps> = ({ handleSubmit }) => {
-  AOS.init({ duration: 1000 });
+  // AOS.init({ duration: 1000 });
   const [inputValue, setInputValue] = useState<InputsValueModel>(initState);
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const button = buttonRef.current;
+
+  let getVar = (variable: any) => {
+    if (!button) return;
+    const computedStyle = getComputedStyle(button);
+    computedStyle.getPropertyValue(variable);
+  };
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setInputValue({
       ...inputValue,
@@ -28,8 +41,10 @@ const Form: React.FC<FormProps> = ({ handleSubmit }) => {
     const { name, email, message } = inputValue;
     if (name && email && message) {
       handleSubmit(inputValue);
+      animationSubmit(button, gsap, getVar);
       setInputValue(initState);
     }
+    
   };
   return (
     <form data-aos="zoom-in" className="form" name="form" onSubmit={onSubmit}>
@@ -65,10 +80,13 @@ const Form: React.FC<FormProps> = ({ handleSubmit }) => {
         onChange={handleChange}
         value={inputValue.message}
       ></textarea>
-      {/* <button className="form__submit" type="submit">
-        Send
-      </button> */}
-      <SubmitButton isSubmit={true}/>
+
+      <button className="button__submit submit" ref={buttonRef}>
+        <span className="default">Send</span>
+        <span className="success">Sent</span>
+        <div className="left"></div>
+        <div className="right"></div>
+      </button>
     </form>
   );
 };

@@ -2,16 +2,13 @@ import "./Contacts.scss";
 import { ContactsList } from "../../data/contacts";
 import ContactCard from "../ContactCard/ContactCard";
 import Form from "../Form/Form";
-import AOS from "aos";
 import axios from "axios";
 import { InputsValueModel } from "../../models/InputsValueModel";
 import { CHAT_ID, URL_API } from "../../utils/constans";
 import { sendMessage } from "../../utils/functions";
 
 const Contacts: React.FC = () => {
-  AOS.init({ duration: 1000 });
-
-  const hadleSubmit = (data: InputsValueModel) => {
+   const hadleSubmit = (data: InputsValueModel) => {
     sendMessage(data, axios, URL_API, CHAT_ID);
    
   };

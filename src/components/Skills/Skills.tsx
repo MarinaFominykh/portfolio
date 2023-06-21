@@ -9,11 +9,9 @@ import node from "../../images/icons/node.svg";
 import mongo from "../../images/icons/mongo_db.svg";
 import git from "../../images/icons/git.svg";
 import { SiExpress } from "react-icons/si";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const Skills: React.FC = () => {
-  AOS.init({ duration: 1000 });
+  
   return (
     <section id="skills" className="skills">
       <div className="seperator-skew-btm">
