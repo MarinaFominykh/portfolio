@@ -1,4 +1,5 @@
 import "./Skills.scss";
+import SingleSkill from "../SingleSkill/SingleSkill";
 import ts from "../../images/icons/typescript.svg";
 import js from "../../images/icons/js.svg";
 import react from "../../images/icons/react_tr.svg";
@@ -8,10 +9,19 @@ import scss from "../../images/icons/sass.svg";
 import node from "../../images/icons/node.svg";
 import mongo from "../../images/icons/mongo_db.svg";
 import git from "../../images/icons/git.svg";
-import { SiExpress } from "react-icons/si";
+import ex from "../../images/icons/ex.svg";
+import { skillsList } from "../../data/skills";
+
+const icons = [ts, js, react, html, css, scss, node, mongo, git, ex];
+const skills = skillsList.map((item, i) => {
+  return {
+    id: item.id,
+    title: item.title,
+    icon: icons[i],
+  };
+});
 
 const Skills: React.FC = () => {
-  
   return (
     <section id="skills" className="skills">
       <div className="seperator-skew-btm">
@@ -37,92 +47,15 @@ const Skills: React.FC = () => {
           <span className="skills__title-span text-mrg">Skills</span>
         </h2>
         <ul className="skills__list list">
-          <li className="skills__item-wrapper">
-            <figure className="skills__item">
-              <div className="skills__img-wrapper">
-                <img src={ts} alt="typescript" className="skills__img" />
-                {/* <SiTypescript size="90px" color="#007acc"/> */}
-              </div>
-              <figcaption className="skills__description">
-                TypeScript
-              </figcaption>
-            </figure>
-          </li>
-          <li className="skills__item-wrapper">
-            <figure className="skills__item">
-              <div className="skills__img-wrapper">
-                <img src={js} alt="typescript" className="skills__img" />
-              </div>
-              <figcaption className="skills__description">
-                JavaScript
-              </figcaption>
-            </figure>
-          </li>
-          <li className="skills__item-wrapper">
-            <figure className="skills__item">
-              <div className="skills__img-wrapper">
-                <img src={react} alt="typescript" className="skills__img" />
-              </div>
-              <figcaption className="skills__description">React</figcaption>
-            </figure>
-          </li>
-          <li className="skills__item-wrapper">
-            <figure className="skills__item">
-              <div className="skills__img-wrapper">
-                <img src={html} alt="typescript" className="skills__img" />
-              </div>
-              <figcaption className="skills__description">HTML</figcaption>
-            </figure>
-          </li>
-          <li className="skills__item-wrapper">
-            <figure className="skills__item">
-              <div className="skills__img-wrapper">
-                <img src={css} alt="typescript" className="skills__img" />
-              </div>
-              <figcaption className="skills__description">CSS</figcaption>
-            </figure>
-          </li>
-          <li className="skills__item-wrapper">
-            <figure className="skills__item">
-              <div className="skills__img-wrapper">
-                <img src={scss} alt="typescript" className="skills__img" />
-              </div>
-              <figcaption className="skills__description">Sass</figcaption>
-            </figure>
-          </li>
-          <li className="skills__item-wrapper">
-            <figure className="skills__item">
-              <div className="skills__img-wrapper">
-                <img src={node} alt="typescript" className="skills__img" />
-              </div>
-              <figcaption className="skills__description">Node.js</figcaption>
-            </figure>
-          </li>
-          <li className="skills__item-wrapper">
-            <figure className="skills__item">
-              <div className="skills__img-wrapper">
-                <img src={mongo} alt="typescript" className="skills__img" />
-              </div>
-              <figcaption className="skills__description">MondoDB</figcaption>
-            </figure>
-          </li>
-          <li className="skills__item-wrapper">
-            <figure className="skills__item">
-              <div className="skills__img-wrapper">
-                {/* <img src={express} alt="typescript" className="skills__img" /> */}
-                <SiExpress size="90px" color="#white" />
-              </div>
-              <figcaption className="skills__description">Express</figcaption>
-            </figure>
-          </li>
-          <li className="skills__item-wrapper">
-            <figure className="skills__item">
-              <div className="skills__img-wrapper">
-                <img src={git} alt="typescript" className="skills__img" />
-              </div>
-              <figcaption className="skills__description">GitHub</figcaption>
-            </figure>
-          </li>
+          {skills.map((skill) => {
+            return (
+              <SingleSkill
+                key={skill.id}
+                icon={skill.icon}
+                title={skill.title}
+              />
+            );
+          })}
         </ul>
       </div>
       <div className="seperator-skew">
